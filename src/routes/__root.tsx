@@ -6,8 +6,6 @@ import {
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanstackDevtools } from '@tanstack/react-devtools'
 
-import Header from '../components/Header'
-
 import ConvexProvider from '../integrations/convex/provider'
 
 import TanStackQueryDevtools from '../integrations/tanstack-query/devtools'
@@ -19,6 +17,14 @@ import { Toaster } from 'sonner'
 
 interface MyRouterContext {
   queryClient: QueryClient
+  user?: {
+    _id: string
+    phone: string
+    firstName: string
+    lastName: string
+    status: 'online' | 'offline'
+    sessionToken: string
+  }
 }
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({

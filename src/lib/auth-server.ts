@@ -40,7 +40,16 @@ export const getCurrentUserServer = createServerFn({
     }
 
     const result = await response.json()
-    return result.value
+
+    // ✅ Include the sessionToken in the returned user object
+    if (result.value) {
+      return {
+        ...result.value,
+        sessionToken, // Add the token to the user object
+      }
+    }
+
+    return null
   } catch (error) {
     console.error('Error fetching user:', error)
     return null
