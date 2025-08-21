@@ -1,0 +1,19 @@
+{
+  "projectName": "rime",
+  "mode": "file-router",
+  "typescript": true,
+  "tailwind": true,
+  "packageManager": "npm",
+  "git": true,
+  "version": 1,
+  "framework": "react-cra",
+  "chosenAddOns": [
+    "eslint",
+    "start",
+    "convex",
+    "form",
+    "shadcn",
+    "tanstack-query",
+    "table"
+  ]
+}
